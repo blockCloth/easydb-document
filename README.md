@@ -1,46 +1,49 @@
 ---
-home: true
-icon: home
-title: 主页
-heroImage: https://blockcloth.cn/codingblog/logo_transparent.png
-bgImageStyle:
-  background-attachment: fixed
-heroText: EasyDB
-tagline: 轻量级、高性能的自定义数据库解决方案
-actions:
-  - text: 项目体验
-    icon: rocket
-    link: http://db.blockcloth.cn/
-    type: primary
+# EasyDB
 
-  - text: 使用指南
-    icon: lightbulb
-    link: ./guide/
+![EasyDB Logo](https://blockcloth.cn/codingblog/logo_transparent.png)
 
-  - text: 项目文档
-    icon: book
-    link: ./docs/
+**轻量级、高性能的自定义数据库解决方案**
 
-features:
-  - title: 🛠️ 核心功能
-    details: EasyDB 采用 MySQL、PostgreSQL 和 SQLite 的部分原理，并参考 MYDB 的设计，具备数据的可靠性、两阶段锁协议（2PL）实现的串行化调度、MVCC、多种事务隔离级别以及死锁处理和超时检测等功能，提供了轻量级且高效的数据库解决方案。
+​---
 
-  - title: 🌐 WebSocket 实时通信
-    details: EasyDB 使用 WebSocket 实现实时通信功能，每个用户拥有独立的数据区，以确保数据安全性和互不干扰。项目还通过线程管理和自动销毁机制优化了多页面访问体验，提升了用户操作的流畅度。
+## 项目体验
 
-  - title: 🔍 高效 SQL 解析
-    details: 引入 JSQLParser 库，EasyDB 能够将 SQL 语句解析为抽象语法树 (AST)，极大简化了 SQL 查询的分析与修改。开发者无需手动解析 SQL 字符串，即可高效处理复杂的 SQL 操作。
+[![Rocket Icon](https://img.icons8.com/ios-filled/50/000000/rocket.png)](http://db.blockcloth.cn/) 项目体验
 
-  - title: ⚙️ 数据管理与优化
-    details: EasyDB 支持全表扫描与索引处理，即使在字段未建立索引的情况下，依然可以进行条件筛选操作。同时，系统内置丰富的条件约束与主键索引功能，支持唯一性、非空性、自增性等多种约束条件。
+## 使用指南
 
-  - title: 🚦 事务控制与死锁检测
-    details: EasyDB 提供完善的事务隔离机制，支持从读未提交到串行化的多种隔离级别。通过全局锁实现事务的串行化处理，并通过超时检测功能防止系统资源长期占用，增强了系统的可靠性。
+[![Lightbulb Icon](https://img.icons8.com/ios-filled/50/000000/lightbulb.png)](./guide/) 使用指南
 
-  - title: 📝 日志管理与故障恢复
-    details: EasyDB 内置了强大的日志管理机制，确保所有数据库操作的可追溯性。通过日志记录实现数据一致性保障，支持故障恢复功能，增强系统的容错能力和数据的安全性。
+## 项目文档
 
-footer: 使用 <a href="http://db.blockcloth.cn/" target="_blank">EasyDB</a> | MIT 协议, 版权所有
+[![Book Icon](https://img.icons8.com/ios-filled/50/000000/book.png)](./docs/) 项目文档
+
+​---
+
+## 核心功能
+
+🛠️ **核心功能**  
+EasyDB 采用 MySQL、PostgreSQL 和 SQLite 的部分原理，并参考 MYDB 的设计，具备数据的可靠性、两阶段锁协议（2PL）实现的串行化调度、MVCC、多种事务隔离级别以及死锁处理和超时检测等功能，提供了轻量级且高效的数据库解决方案。
+
+🌐 **WebSocket 实时通信**  
+EasyDB 使用 WebSocket 实现实时通信功能，每个用户拥有独立的数据区，以确保数据安全性和互不干扰。项目还通过线程管理和自动销毁机制优化了多页面访问体验，提升了用户操作的流畅度。
+
+🔍 **高效 SQL 解析**  
+引入 JSQLParser 库，EasyDB 能够将 SQL 语句解析为抽象语法树 (AST)，极大简化了 SQL 查询的分析与修改。开发者无需手动解析 SQL 字符串，即可高效处理复杂的 SQL 操作。
+
+⚙️ **数据管理与优化**  
+EasyDB 支持全表扫描与索引处理，即使在字段未建立索引的情况下，依然可以进行条件筛选操作。同时，系统内置丰富的条件约束与主键索引功能，支持唯一性、非空性、自增性等多种约束条件。
+
+🚦 **事务控制与死锁检测**  
+EasyDB 提供完善的事务隔离机制，支持从读未提交到串行化的多种隔离级别。通过全局锁实现事务的串行化处理，并通过超时检测功能防止系统资源长期占用，增强了系统的可靠性。
+
+📝 **日志管理与故障恢复**  
+EasyDB 内置了强大的日志管理机制，确保所有数据库操作的可追溯性。通过日志记录实现数据一致性保障，支持故障恢复功能，增强系统的容错能力和数据的安全性。
+
+​---
+
+© 2024-至今 blockCloth | [使用 EasyDB](http://db.blockcloth.cn/)
 ---
 
 ## 🎉 欢迎使用 EasyDB
