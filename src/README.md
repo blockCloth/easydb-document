@@ -15,11 +15,11 @@ actions:
 
   - text: 使用指南
     icon: lightbulb
-    link: ./guide/
+    link: ./demo/
 
   - text: 项目文档
     icon: book
-    link: ./docs/
+    link: ./document/
 
 features:
   - title: 🛠️ 核心功能

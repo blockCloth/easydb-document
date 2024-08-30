@@ -1,10 +1,11 @@
 ---
-title: EasyDB
+title: 前言
 index: false
-icon: laptop-code
+icon: object-group
 category:
-  - 使用指南
+  - 前言
 ---
+
 
 **项目地址：**
 

@@ -17,6 +17,13 @@ export default sidebar({
       link: "demo/",
       children: [
         {
+          text: "前言",
+          prefix: "preface/",
+          link: "preface/",
+          children: "structure",
+        
+        },
+        {
           text: "事务管理",
           prefix: "transaction_manager/",
           link: "transaction_manager/",
