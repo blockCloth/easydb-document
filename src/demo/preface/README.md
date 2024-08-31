@@ -1,7 +1,7 @@
 ---
 title: 前言
 index: false
-icon: object-group
+icon: icon-park-outline:press
 category:
   - 前言
 ---

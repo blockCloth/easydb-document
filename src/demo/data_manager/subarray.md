@@ -1,5 +1,5 @@
 ---
-icon: lock
+icon: material-symbols-light:view-array-outline
 title: 共享内存数组
 order: 2
 category:
@@ -108,7 +108,7 @@ SubArray2:
 ### 总结
 
 通过这个简单的 `SubArray` 类，我们能够在 Java 中模拟 C、C++ 或 Go 语言中的数组内存共享功能。虽然 Java 不允许直接共享数组的内存部分，但通过定义子数组的方式，我们可以高效地管理和操作数组的不同部分，而不必担心多余的内存开销或数据复制。这种方法在需要频繁处理大型数组或在多线程环境下操作共享数据时特别有用。
-:::tip
+:::note
 **本文作者：**[blockCloth](https://github.com/blockCloth)  
 **部分内容转载自：**[https://shinya.click/projects/mydb/mydb2](https://shinya.click/projects/mydb/mydb2)  
 **版权声明：** 本博客所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans)许可协议。转载请注明来自 [blockCloth](https://github.com/blockCloth)

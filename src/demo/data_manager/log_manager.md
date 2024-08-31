@@ -1,5 +1,5 @@
 ---
-icon: lock
+icon: material-symbols-light:two-pager-rounded
 title: 日志管理
 order: 5
 category:
@@ -507,7 +507,7 @@ private static void doUpdateLog(PageCache pc, byte[] log, int flag) {
 ```
 
 以上的代码实现了 EasyDB 中的恢复策略，通过对日志的管理和恢复规则的严格遵守，确保数据库在单线程和多线程环境下的可靠性和一致性。
-:::tip
+:::note
 **本文作者：**[blockCloth](https://github.com/blockCloth)  
 **部分内容转载自：**[https://shinya.click/projects/mydb/mydb4](https://shinya.click/projects/mydb/mydb4)  
 **版权声明：** 本博客所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans)许可协议。转载请注明来自 [blockCloth](https://github.com/blockCloth)

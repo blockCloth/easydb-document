@@ -54,6 +54,12 @@ export default sidebar({
           link: "tbm_manager/",
           children: "structure"
         },
+        {
+          text: "通信协议",
+          prefix: "communication_manager/",
+          link: "communication_manager/",
+          children: "structure"
+        },
       ]
     }
   ],

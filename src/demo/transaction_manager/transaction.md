@@ -1,10 +1,10 @@
 ---
-icon: lock
+icon: octicon:log-16
 title: 事务管理实现与解析
 order: 1
 category:
   - 事务
-tag:
+tag: 
   - 事务
 ---
 
@@ -231,7 +231,7 @@ public void close() {
 TM 模块的主要功能是 **管理事务**，包括事务的开始、提交、回滚以及状态检查。为实现这些功能，模块中定义了一系列关键常量，如 `LEN_XID_HEADER_LENGTH`、`XID_FIELD_SIZE`、`FIELD_TRAN_ACTIVE`、`FIELD_TRAN_COMMITTED`、`FIELD_TRAN_ABORTED`、`SUPER_XID` 和 `XID_SUFFIX`，分别表示 XID 文件头长度、每个事务的占用长度、事务的三种状态、超级事务标识以及 XID 文件的后缀。
 在实现上，TM 模块通过 `RandomAccessFile` 类型的 `file` 和 `FileChannel` 类型的 `fc` 操作 XID 文件，并使用 `xidCounter` 来记录事务的数量，同时通过 `Lock` 类确保线程安全。构造函数中，首先对 `file` 和 `fc` 进行初始化，并调用 `checkXIDCounter` 方法校验 XID 文件的合法性，确保文件的正确性。
 在事务管理方面，`begin()` 方法用于开始一个新事务，通过调用 `updateXID()` 方法将事务 ID 和状态写入 XID 文件，并通过 `incrXIDCounter()` 方法更新 XID 计数器。`commit()` 和 `abort()` 方法分别用于提交和回滚事务，依赖 `updateXID()` 方法来更新事务状态。`isActive()`、`isCommitted()` 和 `isAborted()` 方法用于检查事务状态，通过 `checkXID()` 方法确认事务的当前状态。`close()` 方法则负责关闭文件通道和文件，确保资源的正确释放。
-:::tip
+:::note
 **本文作者：**[blockCloth](https://github.com/blockCloth)  
 **部分内容转载自：**[https://shinya.click/projects/mydb/mydb1](https://shinya.click/projects/mydb/mydb1)  
 **版权声明：** 本博客所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans)许可协议。转载请注明来自 [blockCloth](https://github.com/blockCloth)

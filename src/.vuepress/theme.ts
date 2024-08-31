@@ -11,7 +11,9 @@ export default hopeTheme({
     url: "https://github.com/blockCloth",
   },
 
-  iconAssets: "fontawesome-with-brands",
+  // iconAssets: ["fontawesome-with-brands","iconify"],
+  iconAssets: "iconify",
+  
 
   logo: "https://blockcloth.cn/codingblog/android-chrome-512x512.png",
 
@@ -58,6 +60,7 @@ export default hopeTheme({
     components: {
       components: ["Badge", "VPCard"],
     },
+    
 
     // 此处开启了很多功能用于演示，你应仅保留用到的功能。
     mdEnhance: {

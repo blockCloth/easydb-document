@@ -1,5 +1,5 @@
 ---
-icon: lock
+icon: carbon:insert-page
 title: DM 的实现
 order: 7
 category:
@@ -7,7 +7,7 @@ category:
 tag:
   - DM
 ---
-> 本章涉及代码：com/dyx/simpledb/backend/dm/dataItem/*；com/dyx/simpledb/backend/dm/*；
+> 本章涉及代码：com/dyx/simpledb/backend/dm/dataItem/*； com/dyx/simpledb/backend/dm/*；
 
 ### DataItem 的实现
 
@@ -396,7 +396,7 @@ public static DataManager open(String path, long mem, TransactionManager tm) {
 ### 总结
 
 `DataItem` 和 `DataManager` 是数据库系统中数据管理的关键组件。`DataItem` 提供了数据的存储和访问接口，支持数据修改和事务管理。而 `DataManager` 负责管理底层数据的访问、缓存、事务处理和日志记录，通过这些功能的实现，为上层模块提供了安全、高效的数据操作接口。两者的协作使得数据库系统能够以高效、可靠的方式管理和操作底层数据，确保数据的安全性和一致性。
-:::tip
+:::note
 **本文作者：**[blockCloth](https://github.com/blockCloth)  
 **部分内容转载自：**[https://shinya.click/projects/mydb/mydb5](https://shinya.click/projects/mydb/mydb5)  
 **版权声明：** 本博客所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans)许可协议。转载请注明来自 [blockCloth](https://github.com/blockCloth)

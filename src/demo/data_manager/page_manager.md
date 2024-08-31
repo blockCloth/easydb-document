@@ -1,5 +1,5 @@
 ---
-icon: lock
+icon: ooui:page-settings
 title: 数据页管理
 order: 4
 category:
@@ -105,7 +105,7 @@ public static short insert(Page pg, byte[] raw) {
 ```
 
 通过以上机制，EasyDB能够有效地管理页面的空闲空间，并确保数据的一致性与完整性。第一页的校验机制确保了数据库在启动时能够检测并处理未正常关闭的情况，而普通页的FSO管理则确保了数据插入和存储的高效与准确。
-:::tip
+:::note
 **本文作者：**[blockCloth](https://github.com/blockCloth)  
 **部分内容转载自：**[https://shinya.click/projects/mydb/mydb3](https://shinya.click/projects/mydb/mydb3)  
 **版权声明：** 本博客所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans)许可协议。转载请注明来自 [blockCloth](https://github.com/blockCloth)

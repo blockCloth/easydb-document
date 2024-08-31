@@ -7,7 +7,7 @@ export default defineUserConfig({
 
   lang: "zh-CN",
   title: "EasyDB",
-  description: "EasyDB教程文档",
+  description: "EasyDB教程文档 ",
 
   theme,
 

@@ -1,5 +1,5 @@
 ---
-icon: file-type-light-db
+icon: fluent:data-line-24-regular
 title: 引用计数缓存框架
 order: 1
 category:
@@ -195,7 +195,7 @@ protected void close() {
 ### 总结
 
 引用计数缓存框架结合了灵活的资源管理和有效的回源策略，在提高系统性能的同时，避免了 LRU 策略可能引发的问题。通过引用计数，系统能够确保资源的有效使用和及时释放，减少不必要的回源操作，提高了系统的整体效率和稳定性。
-:::tip
+:::note
 **本文作者：**[blockCloth](https://github.com/blockCloth)  
 **部分内容转载自：**[https://shinya.click/projects/mydb/mydb2](https://shinya.click/projects/mydb/mydb2)  
 **版权声明：** 本博客所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans)许可协议。转载请注明来自 [blockCloth](https://github.com/blockCloth)

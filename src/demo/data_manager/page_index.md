@@ -1,5 +1,5 @@
 ---
-icon: lock
+icon: iconoir:page-search
 title: 页面索引
 order: 6
 category:
@@ -98,7 +98,7 @@ void fillPageIndex() {
 ### 总结
 
 页面索引通过缓存页面的空闲空间信息，显著提高了数据库插入操作的效率。在进行插入操作时，可以快速找到一个合适的页面，而无需遍历磁盘或缓存中的所有页面。通过实现 `PageIndex` 类以及相关方法，数据库系统在处理大量插入操作时表现得更加高效，减少了磁盘访问次数，优化了系统性能。
-:::tip
+:::note
 **本文作者：**[blockCloth](https://github.com/blockCloth)  
 **部分内容转载自：**[https://shinya.click/projects/mydb/mydb5](https://shinya.click/projects/mydb/mydb5)  
 **版权声明：** 本博客所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans)许可协议。转载请注明来自 [blockCloth](https://github.com/blockCloth)

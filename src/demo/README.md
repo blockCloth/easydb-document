@@ -1,7 +1,7 @@
 ---
 title: EasyDB
 index: false
-icon: laptop-code
+icon: icon-park-outline:database-sync
 category:
   - 使用指南
 ---
@@ -141,7 +141,7 @@ mvn exec:java '-Dexec.mainClass="com.dyx.simpledb.client.Launcher"'
 ![image.png](https://blockcloth.cn/codingblog/idea.png)
 
 
-::: tip
+::: note
 **本文作者：**[blockCloth](https://github.com/blockCloth)  
 **部分内容转载自：**[https://shinya.click/projects/mydb/mydb0](https://shinya.click/projects/mydb/mydb0)  
 **版权声明：** 本博客所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans)许可协议。转载请注明来自 [blockCloth](https://github.com/blockCloth)

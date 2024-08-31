@@ -1,8 +1,6 @@
 ---
 title: EasyDB使用文档
-icon: file
-order: -1
-headerDepth: 1
+icon: fluent:document-search-20-regular
 
 footer: 使用 <a href="http://db.blockcloth.cn/" target="_blank">EasyDB</a> | MIT 协议, 版权所有
 ---

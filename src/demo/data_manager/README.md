@@ -1,7 +1,7 @@
 ---
 title: 数据管理
 index: false
-icon: object-group
+icon: majesticons:data-line
 category:
   - 数据
 tag:

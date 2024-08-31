@@ -1,5 +1,5 @@
 ---
-icon: lock
+icon: material-symbols:restore-page-outline-rounded
 title: 数据页缓存
 order: 3
 category:
@@ -195,7 +195,7 @@ public static void recoverUpdate(Page pg, byte[] raw, short offset) {
 ### 总结
 
 页面缓存的设计和实现对于提升数据库系统的读写性能至关重要。通过页面缓存机制，系统可以减少不必要的磁盘 I/O 操作，同时保证数据的一致性和可靠性。在数据恢复方面，通过 `recoverInsert()` 和 `recoverUpdate()` 方法，系统可以在发生崩溃后有效地恢复数据，确保数据的完整性。
-:::tip
+:::note
 **本文作者：**[blockCloth](https://github.com/blockCloth)  
 **部分内容转载自：**[https://shinya.click/projects/mydb/mydb3](https://shinya.click/projects/mydb/mydb3)  
 **版权声明：** 本博客所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans)许可协议。转载请注明来自 [blockCloth](https://github.com/blockCloth)
