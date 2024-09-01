@@ -5,7 +5,7 @@ order: 5
 category:
   - DM
 tag:
-  - 日志
+  - log
 ---
 
 > 本章涉及代码：com/dyx/simpledb/backend/dm/logger；com/dyx/simpledb/backend/dm/Recover.java

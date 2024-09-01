@@ -5,8 +5,8 @@ order: 2
 category:
   - TBM
 tag:
-  - table
-  - field
+  - Table
+  - Field
 ---
 > 本章涉及代码：com/dyx/simpledb/backend/tbm/Table、Field.java
 

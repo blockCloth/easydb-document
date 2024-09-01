@@ -5,11 +5,11 @@ icon: fluent:resize-table-20-regular
 category:
   - 字段与表
 tag:
-  - booter
-  - jsqlparser
+  - Booter
+  - JSQLParser
   - TBM
-  - table
-  - field
+  - Table
+  - Field
 ---
 ### 前言
 

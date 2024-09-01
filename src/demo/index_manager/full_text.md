@@ -5,7 +5,7 @@ order: 2
 category:
   - IM
 tag:
-  - fullText
+  - FullText
 ---
 
 > 本章涉及代码：com/dyx/simpledb/backend/tbm/Table.java

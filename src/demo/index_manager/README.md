@@ -5,8 +5,8 @@ icon: oui:app-index-pattern
 category:
   - 索引
 tag:
-  - index
-  - fullIndex
+  - Index
+  - FullIndex
 ---
 ### 前言
 

@@ -5,7 +5,7 @@ order: 3
 category:
   - TBM
 tag:
-  - jsqlparse
+  - JSQLParser
 ---
 JSQLParser 是一个强大的 Java 库，用于解析 SQL 语句并将其转换为易于处理的 Java 对象。本文将通过解析 `Parser` 类，讲解如何使用 JSQLParser 解析和处理不同类型的 SQL 语句。
 

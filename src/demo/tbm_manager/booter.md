@@ -5,7 +5,7 @@ order: 1
 category:
   - TBM
 tag:
-  - booter
+  - Booter
 ---
 > 本章涉及代码：com/dyx/simpledb/backend/tbm/Booter.java
 

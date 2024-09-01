@@ -4,6 +4,8 @@ index: false
 icon: pajamas:log
 category:
   - 事务
+tag:
+  - XID
 ---
 前言
 

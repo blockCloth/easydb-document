@@ -1,8 +1,10 @@
 ---
 title: EasyDB使用文档
 icon: fluent:document-search-20-regular
-
-footer: 使用 <a href="http://db.blockcloth.cn/" target="_blank">EasyDB</a> | MIT 协议, 版权所有
+category:
+  - document
+tag:
+  - SQL
 ---
 
 本使用文档旨在帮助用户快速上手使用本数据库系统。文档内容主要围绕常见的 SQL 语句和数据库操作，适合初学者和希望快速掌握数据库基本功能的用户。

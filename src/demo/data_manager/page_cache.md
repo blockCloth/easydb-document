@@ -5,7 +5,7 @@ order: 3
 category:
   - DM
 tag:
-  - 页面缓存
+  - PageCache
 ---
 > 本章涉及代码：com/dyx/simpledb/backend/dm/pageCache/*
 

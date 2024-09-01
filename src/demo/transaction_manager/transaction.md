@@ -5,7 +5,7 @@ order: 1
 category:
   - 事务
 tag: 
-  - 事务
+  - XID
 ---
 
 > 本章涉及代码：com/dyx/simpledb/backend/tm/*

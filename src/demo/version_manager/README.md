@@ -5,7 +5,10 @@ icon: carbon:web-services-task-definition-version
 category:
   - VM
 tag:
-  - 
+  - DeadLock
+  - Transaction
+  - Version
+  - VM
 ---
 
 在本节中，我们将深入探讨 EasyDB 中的 Version Manager (VM) 模块，这一模块是数据库系统的关键组成部分之一，负责管理数据库的事务和数据版本。VM 模块的设计确保了数据库的并发控制和数据一致性，同时通过 MVCC（多版本并发控制）实现了不同事务之间的隔离。以下是 VM 模块的几个关键功能：

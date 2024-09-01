@@ -3,13 +3,16 @@ title: 数据管理
 index: false
 icon: majesticons:data-line
 category:
-  - 数据
+  - DM
 tag:
-  - 页面索引
-  - 页面缓存
+  - PageIndex
+  - PageCache
+  - Page
   - 引用计数缓存框架
   - DataItem
   - SubArray
+  - log
+  - DM
 ---
 
 在本节中，我们将深入探讨 EasyDB 中的 **Data Manager (DM)** 模块，这是数据库系统的核心组件之一，负责管理数据库的 DB 文件和日志文件。DM 模块的设计不仅确保了数据库的高效运行，还提供了强大的数据恢复功能。以下是 DM 模块的几个关键功能：

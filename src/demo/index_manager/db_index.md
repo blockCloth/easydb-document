@@ -5,7 +5,7 @@ order: 1
 category:
   - IM
 tag:
-  - index
+  - Index
 ---
 
 > 本章涉及代码：com/dyx/simpledb/backend/im/*

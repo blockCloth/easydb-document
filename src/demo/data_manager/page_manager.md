@@ -5,7 +5,7 @@ order: 4
 category:
   - DM
 tag:
-  - 页面管理
+  - Page
 ---
 
 > 本章涉及代码：com/dyx/simpledb/backend/dm/page/*

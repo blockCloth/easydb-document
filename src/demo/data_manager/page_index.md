@@ -5,7 +5,7 @@ order: 6
 category:
   - DM
 tag:
-  - pageIndex
+  - PageIndex
 ---
 > 本章涉及代码：com/dyx/simpledb/backend/dm/pageIndex/*
 
