@@ -81,7 +81,7 @@ cd EasyDB
 
 - [项目体验](http://db.blockcloth.cn/)
 - [使用指南](http://easydb.blockcloth.cn/document/)
-- [项目文档](http://easydb.blockcloth.cn/document/demo)
+- [项目文档](http://easydb.blockcloth.cn/demo)
 
 ---
 
