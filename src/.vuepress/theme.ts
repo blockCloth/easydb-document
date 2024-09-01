@@ -28,7 +28,7 @@ export default hopeTheme({
 
   // 页脚
   // footer: "默认页脚",
-  footer: "<a href=\"http://db.blockcloth.cn/\" target=\"_blank\">EasyDB</a> | MIT 协议, 版权所有 |<img src=\"https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/beian.png\" height=\"15px\" width=\"15px\"><a href=\"https://beian.miit.gov.cn\" target=\"_blank\">赣ICP备2024025197号</a>",
+  footer: "<a href=\"http://db.blockcloth.cn/\" target=\"_blank\">EasyDB</a> | MIT 协议, 版权所有 |<a href=\"https://beian.miit.gov.cn\" target=\"_blank\">赣ICP备2024025197号</a>",
   displayFooter: true,
 
   // 加密配置
