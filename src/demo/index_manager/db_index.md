@@ -76,7 +76,7 @@ static byte[] newNilRootRaw()  {
 
 Node 类提供了两个主要方法，用于辅助 B+ 树执行插入和搜索操作：`searchNext` 和 `leafSearchRange`。
 
-- `searchNext`** 方法**：根据给定的键值，查找对应的 UID。如果未找到，则返回兄弟节点的 UID。
+- `searchNext` **方法**：根据给定的键值，查找对应的 UID。如果未找到，则返回兄弟节点的 UID。
 
 ```java
 public SearchNextRes searchNext(long key) {
@@ -101,7 +101,7 @@ public SearchNextRes searchNext(long key) {
 }
 ```
 
-- `leafSearchRange`** 方法**：在当前节点内进行范围查找，范围为 `[leftKey, rightKey]`。如果 `rightKey` 大于等于该节点的最大键值，则返回兄弟节点的 UID，方便继续搜索下一个节点。
+- `leafSearchRange`**方法**：在当前节点内进行范围查找，范围为 `[leftKey, rightKey]`。如果 `rightKey` 大于等于该节点的最大键值，则返回兄弟节点的 UID，方便继续搜索下一个节点。
 
 ```java
 public LeafSearchRangeRes leafSearchRange(long leftKey, long rightKey) {

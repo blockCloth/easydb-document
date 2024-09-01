@@ -1,10 +1,11 @@
 import { hopeTheme } from "vuepress-theme-hope";
+import { searchProPlugin } from "vuepress-plugin-search-pro";
 
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
+  hostname: "https://github.com/blockCloth/EasyDB",
 
   author: {
     name: "blockCloth",
@@ -14,21 +15,20 @@ export default hopeTheme({
   // iconAssets: ["fontawesome-with-brands","iconify"],
   iconAssets: "iconify",
   
-
   logo: "https://blockcloth.cn/codingblog/android-chrome-512x512.png",
-
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "blockCloth/easydb-document",
 
   docsDir: "src",
+  lastUpdated: true,
 
   // 导航栏
   navbar,
-
   // 侧边栏
   sidebar,
 
   // 页脚
-  footer: "默认页脚",
+  // footer: "默认页脚",
+  footer: "<a href=\"http://db.blockcloth.cn/\" target=\"_blank\">EasyDB</a> | MIT 协议, 版权所有 |<img src=\"https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/beian.png\" height=\"15px\" width=\"15px\"><a href=\"https://beian.miit.gov.cn\" target=\"_blank\">赣ICP备2024025197号</a>",
   displayFooter: true,
 
   // 加密配置
@@ -51,17 +51,22 @@ export default hopeTheme({
     // 注意: 仅用于测试! 你必须自行生成并在生产环境中使用自己的评论服务
     comment: {
       provider: "Giscus",
-      repo: "vuepress-theme-hope/giscus-discussions",
-      repoId: "R_kgDOG_Pt2A",
+      repo: "blockCloth/easydb-document",
+      repoId: "R_kgDOMpc3Uw",
       category: "Announcements",
-      categoryId: "DIC_kwDOG_Pt2M4COD69",
+      categoryId: "DIC_kwDOMpc3U84CiHns",
+      reactionsEnabled: true,
     },
+    
 
     components: {
       components: ["Badge", "VPCard"],
     },
+    searchPro: {
+      indexContent: true,
+      autoSuggestions: false,
+    },
     
-
     // 此处开启了很多功能用于演示，你应仅保留用到的功能。
     mdEnhance: {
       align: true,
@@ -94,6 +99,7 @@ export default hopeTheme({
       tabs: true,
       tasklist: true,
       vPre: true,
+      
 
       // 在启用之前安装 chart.js
       // chart: true,

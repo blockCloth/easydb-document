@@ -37,16 +37,16 @@ private static boolean readUnCommitted(TransactionManager tm, Transaction t, Ent
    - **XMIN is committed** 表示，版本是由一个已提交的事务创建的，因此对其他事务是可见的。
    - **XMAX == NULL** 表示该版本尚未被删除，因此仍然是可见的。
    - **(XMAX != Ti and XMAX is not committed)** 这一部分是说，如果这个版本被其他事务删除了，但该删除操作尚未提交，这意味着删除操作对当前事务不可见，所以当前版本仍然是可见的
-:::note
-(XMIN == Ti and                             // 由Ti创建且</br>
-XMAX == NULL                            // 还未被删除</br>
-)</br>
-or                                          // 或</br>
-(XMIN is commited and                       // 由一个已提交的事务创建且</br>
-(XMAX == NULL or                        // 尚未删除或</br>
-(XMAX != Ti and XMAX is not commited)   // 由一个未提交的事务删除</br>
-))</br>
-:::
+```text
+(XMIN == Ti and                             // 由Ti创建且
+    XMAX == NULL                            // 还未被删除
+)
+or                                          // 或
+(XMIN is commited and                       // 由一个已提交的事务创建且
+    (XMAX == NULL or                        // 尚未删除或
+    (XMAX != Ti and XMAX is not commited)   // 由一个未提交的事务删除
+))
+```
 
 ```java
 private static boolean readCommitted(TransactionManager tm, Transaction t, Entry e) {
@@ -70,7 +70,7 @@ private static boolean readCommitted(TransactionManager tm, Transaction t, Entry
 
 ### 可重复读
 
-**可重复读（Repeatable Read）**解决了读提交级别下的不可重复读问题。在该级别下，事务在其生命周期内多次读取同一数据项时，读取到的结果是一致的，即使其他事务并发地修改了数据。EasyDB 通过事务的快照机制实现这一点，确保事务只能读取到事务开始时已经提交的数据版本。
+<strong>可重复读（Repeatable Read）</strong>解决了读提交级别下的不可重复读问题。在该级别下，事务在其生命周期内多次读取同一数据项时，读取到的结果是一致的，即使其他事务并发地修改了数据。EasyDB 通过事务的快照机制实现这一点，确保事务只能读取到事务开始时已经提交的数据版本。
 
 #### 可重复读的事务可见性逻辑
 
@@ -86,20 +86,20 @@ private static boolean readCommitted(TransactionManager tm, Transaction t, Entry
    - **XMAX is not committed** 表示删除操作尚未提交。
    - **XMAX > Ti** 表示删除操作发生在当前事务 Ti 之后。
    - **XMAX is in SP(Ti)** 表示删除操作发生在当前事务 Ti 开始之前但未提交。
-     :::notes
-     // 可重复读隔离级别下的事务可见性逻辑
-     (XMIN == Ti and                 // 由当前事务 Ti 创建且
-      (XMAX == NULL))                // 尚未被删除
-     or                              // 或
-     (XMIN is committed and           // 由一个已提交的事务创建且
-      XMIN < Ti and                  // 该事务在当前事务 Ti 之前提交
-      XMIN is not in SP(Ti) and      // 该事务不在当前事务 Ti 的快照中
-      (XMAX == NULL or               // 尚未删除或
-     (XMAX != Ti and               // 删除操作由其他事务执行但不是当前事务 Ti
-     (XMAX is not committed or    // 删除操作尚未提交或
-      XMAX > Ti or                // 删除操作在当前事务 Ti 之后执行或
-      XMAX is in SP(Ti)))))       // 删除操作在当前事务 Ti 开始时未提交
-     :::
+```text
+// 可重复读隔离级别下的事务可见性逻辑
+(XMIN == Ti and                 // 由当前事务 Ti 创建且
+  (XMAX == NULL))               // 尚未被删除
+or                              // 或
+(XMIN is committed and          // 由一个已提交的事务创建且
+  XMIN < Ti and                 // 该事务在当前事务 Ti 之前提交
+  XMIN is not in SP(Ti) and     // 该事务不在当前事务 Ti 的快照中
+  (XMAX == NULL or              // 尚未删除或
+    (XMAX != Ti and             // 删除操作由其他事务执行但不是当前事务 Ti
+      (XMAX is not committed or // 删除操作尚未提交或
+       XMAX > Ti or             // 删除操作在当前事务 Ti 之后执行或
+       XMAX is in SP(Ti)))))    // 删除操作在当前事务 Ti 开始时未提交
+```
 
 ```java
 private static boolean repeatableRead(TransactionManager tm, Transaction t, Entry e) {
@@ -123,7 +123,7 @@ private static boolean repeatableRead(TransactionManager tm, Transaction t, Entr
 
 ### 串行化
 
-**串行化（Serializable）**是最高级别的事务隔离，确保事务像是按顺序一个接一个执行的，从而避免了所有的并发问题。在这个级别下，事务之间不会相互影响，彻底解决了脏读、不可重复读和幻读问题。
+<strong>串行化（Serializable）</strong>是最高级别的事务隔离，确保事务像是按顺序一个接一个执行的，从而避免了所有的并发问题。在这个级别下，事务之间不会相互影响，彻底解决了脏读、不可重复读和幻读问题。
  在 EasyDB 中，串行化通过强制事务之间的完全隔离来实现。在串行化隔离级别下，每个事务只能看到它开始之前已经提交的版本，以及它自己创建或修改的版本。此逻辑与可重复读的一致性逻辑相似。  
 
 ```java

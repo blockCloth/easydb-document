@@ -12,8 +12,10 @@
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.14",
+    "@waline/client": "^3.3.0",
     "vue": "^3.4.31",
     "vuepress": "2.0.0-rc.14",
+    "vuepress-plugin-search-pro": "2.0.0-rc.52",
     "vuepress-theme-hope": "2.0.0-rc.52"
   }
 }

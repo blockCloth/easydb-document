@@ -25,8 +25,7 @@ EasyDB 的架构分为前端和后端两个部分，各自承担不同的职责�
 1. **基于 Socket 交互的启动**：提供轻量级、低延迟的网络交互。
 2. **基于 SpringBoot + React 的启动**：集成了现代 Web 框架，为前后端提供更强大的支持和灵活性。
 ## EasyDB 模块依赖与职责概述
-EasyDB 的模块设计遵循一定的依赖关系，通过拓扑排序可以清晰地看到各个模块的实现顺序。在本教程中，模块的实现顺序为：**Transaction Manager (TM) -> Data Manager (DM) -> Version Manager (VM) -> Index Manager (IM) -> Table Manager (TBM)**。
-
+EasyDB 的模块设计遵循一定的依赖关系，通过拓扑排序可以清晰地看到各个模块的实现顺序。在本教程中，模块的实现顺序为：**Transaction Manager (TM) -> Data Manager (DM) -> Version Manager (VM) -> Index Manager (IM) -> Table Manager (TBM)**。  
 ![image.png](https://blockcloth.cn/codingblog/mydb0.jpg)
 ### 模块职责
 
@@ -104,8 +103,7 @@ mvn exec:java '-Dexec.mainClass="com.dyx.simpledb.backend.Launcher"' '-Dexec.arg
 ```shell
 mvn exec:java '-Dexec.mainClass="com.dyx.simpledb.client.Launcher"'
 ```
-执行示例：
-
+执行示例：  
 ![socket.png](https://blockcloth.cn/codingblog/socket.png)
 #### 通过 IntelliJ IDEA 配置和启动 EasyDB 项目
 在通过 IntelliJ IDEA 启动 EasyDB 项目时，你可以利用启动配置来自动化数据库的创建和启动过程。以下步骤将指导你如何配置 IntelliJ IDEA，使其在启动 `com.dyx.simpledb.backend.Launcher` 类时，先创建数据库并打开它，随后只需启动 `com.dyx.simpledb.client.Launcher` 类即可进行交互。
@@ -136,8 +134,7 @@ mvn exec:java '-Dexec.mainClass="com.dyx.simpledb.client.Launcher"'
 
 1. **运行客户端**：
    - 运行 `com.dyx.simpledb.client.Launcher` 启动配置，启动客户端。
-   - 客户端启动后，将进入交互式命令行，你可以在其中输入 SQL 语句，与数据库进行交互。
-
+   - 客户端启动后，将进入交互式命令行，你可以在其中输入 SQL 语句，与数据库进行交互。  
 ![image.png](https://blockcloth.cn/codingblog/idea.png)
 
 
